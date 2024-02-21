@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const connectToDb = require('./config/db');
+const userRoute = require('./routes/userRoute');
 
 //initialize express
 const app = express();
@@ -12,6 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bodyParser.json());
+
+//routes middleware
+app.use('/api/users', userRoute);
 
 //routes
 app.get('/', (req, res) => res.send('API running'));
