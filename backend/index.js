@@ -7,6 +7,9 @@ const connectToDb = require('./config/db');
 //initialize express
 const app = express();
 
+//routes
+app.get('/', (req, res) => res.send('API running'));
+
 const PORT = process.env.PORT || 5000;
 
 // connect to mongodb
