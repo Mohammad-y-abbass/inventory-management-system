@@ -1,5 +1,9 @@
 const registerUser = (req, res) => {
-  res.send('register');
+  try{
+    
+  }catch(err) {
+
+  }
 };
 
 module.exports = {
